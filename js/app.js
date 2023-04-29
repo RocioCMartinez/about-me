@@ -40,8 +40,10 @@ if (fourthGuess === 'yes' || fourthGuess === 'y'){
 let fithGuess = prompt('Do I like to cook?').toLowerCase();
 
 if (fithGuess === 'yes' || fithGuess === 'y'){
-  alert('That\'s right! I challenge myself to make healthy versions of Mexican food.');
+  alert(`That\'s right! I challenge myself to make healthy versions of Mexican food. Thanks for playing ${userName}!`);
 } else if (fithGuess === 'no' || fithGuess === 'n'){
-  alert('Incorrect, I try to make my workouts easier by cooking healthy food.');
+  alert(`Incorrect, I try to make my workouts easier by cooking healthy food. Thanks for playing ${userName}`);
 }
+
+
 
