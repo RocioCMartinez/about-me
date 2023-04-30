@@ -10,4 +10,12 @@ h2 {
   text-align: left; font-size: 1vw; background-color: black; color: whitesmoke;
 }
 
+ol {
+  list-style-type: number;
+  list-style-position: inside;
+}
 
+ul{
+  list-style-type: disc;
+  list-style-position: inside;
+}
