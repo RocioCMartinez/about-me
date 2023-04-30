@@ -14,6 +14,7 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 ### Lighthouse Accessibility Report Score
 
 [Report Screenshot](img/lighthousescore.png)
+[Lab 3 Screenshot](img/Lab3.png)
 
 ### Reflections and Comments
 
