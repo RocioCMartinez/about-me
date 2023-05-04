@@ -22,15 +22,19 @@ function petQuestion(){
 }
 petQuestion();
 
-let secondGuess = prompt('Is my favorite color pink?').toLowerCase();
+function colorQuestion(){
+  let secondGuess = prompt('Is my favorite color pink?').toLowerCase();
+  
+  if (secondGuess === 'yes' || secondGuess === 'y'){
+    //console.log('user is wrong');
+    alert('You would be wrong. My favorite color is emerald green.');
+  } else if(secondGuess === 'no' || secondGuess === 'n'){
+    alert('That\'s right! Nothing against pink, I just love emerald green.');
+    correctAnswer++;
+  }
 
-if (secondGuess === 'yes' || secondGuess === 'y'){
-  //console.log('user is wrong');
-  alert('You would be wrong. My favorite color is emerald green.');
-} else if(secondGuess === 'no' || secondGuess === 'n'){
-  alert('That\'s right! Nothing against pink, I just love emerald green.');
-  correctAnswer++;
 }
+colorQuestion();
 
 let thirdGuess = prompt('Do I like to workout?').toLowerCase();
 
