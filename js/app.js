@@ -50,15 +50,19 @@ function workoutQuestion(){
 }
 workoutQuestion();
 
-let fourthGuess = prompt('Do I enjoy reading?').toLowerCase();
+function readingQuestion(){
+  let fourthGuess = prompt('Do I enjoy reading?').toLowerCase();
+  
+  if (fourthGuess === 'yes' || fourthGuess === 'y'){
+    //console.log('correct answer');
+    alert('Correct! I love to read, it\'s a good escape');
+    correctAnswer++;
+  } else if(fourthGuess === 'no' || fourthGuess === 'n'){
+    alert('That would be wrong.');
+  }
 
-if (fourthGuess === 'yes' || fourthGuess === 'y'){
-  //console.log('correct answer');
-  alert('Correct! I love to read, it\'s a good escape');
-  correctAnswer++;
-} else if(fourthGuess === 'no' || fourthGuess === 'n'){
-  alert('That would be wrong.');
 }
+readingQuestion();
 
 let fithGuess = prompt('Do I like to cook?').toLowerCase();
 
