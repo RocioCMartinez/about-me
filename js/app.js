@@ -36,15 +36,19 @@ function colorQuestion(){
 }
 colorQuestion();
 
-let thirdGuess = prompt('Do I like to workout?').toLowerCase();
+function workoutQuestion(){
+  let thirdGuess = prompt('Do I like to workout?').toLowerCase();
+  
+  if (thirdGuess === 'yes' || thirdGuess === 'y'){
+    //console.log('user is right');
+    alert('That is correct! Usually 5 days a week to keep my stress down.');
+    correctAnswer++;
+  } else if(thirdGuess === 'no' || thirdGuess === 'n'){
+    alert('Wrong, I am a nightmare if I dont workout!');
+  }
 
-if (thirdGuess === 'yes' || thirdGuess === 'y'){
-  //console.log('user is right');
-  alert('That is correct! Usually 5 days a week to keep my stress down.');
-  correctAnswer++;
-} else if(thirdGuess === 'no' || thirdGuess === 'n'){
-  alert('Wrong, I am a nightmare if I dont workout!');
 }
+workoutQuestion();
 
 let fourthGuess = prompt('Do I enjoy reading?').toLowerCase();
 
