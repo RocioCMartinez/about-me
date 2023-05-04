@@ -64,15 +64,20 @@ function readingQuestion(){
 }
 readingQuestion();
 
-let fithGuess = prompt('Do I like to cook?').toLowerCase();
+function cookQuestion(){
+  let fithGuess = prompt('Do I like to cook?').toLowerCase();
+  
+  if (fithGuess === 'yes' || fithGuess === 'y'){
+    //console.log('right answer');
+    alert(`That's right! I challenge myself to make healthy versions of Mexican food. Way to go ${userName}!`);
+    correctAnswer++;
+  } else if (fithGuess === 'no' || fithGuess === 'n'){
+    alert(`Incorrect, I try to make my workouts easier by cooking healthy food. Thanks for playing ${userName}`);
+  }
 
-if (fithGuess === 'yes' || fithGuess === 'y'){
-  //console.log('right answer');
-  alert(`That's right! I challenge myself to make healthy versions of Mexican food. Way to go ${userName}!`);
-  correctAnswer++;
-} else if (fithGuess === 'no' || fithGuess === 'n'){
-  alert(`Incorrect, I try to make my workouts easier by cooking healthy food. Thanks for playing ${userName}`);
 }
+
+cookQuestion();
 
 let sixthGuess = +prompt('Guess how many siblings I have.');
 console.log(sixthGuess);
