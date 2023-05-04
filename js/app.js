@@ -79,27 +79,33 @@ function cookQuestion(){
 
 cookQuestion();
 
-let sixthGuess = +prompt('Guess how many siblings I have.');
-console.log(sixthGuess);
-let mySiblings = 2;
-let userAttempts = 0;
-while (userAttempts < 4){
-  if (sixthGuess === mySiblings){
-    alert('Yes! That is right.');
-    correctAnswer++;
-    break;
-  } else if (sixthGuess > mySiblings){
-    alert('Your guess is too high');
-  } else {
-    alert('Your guess is too low');
+function siblingsQuestion(){
+  let sixthGuess = +prompt('Guess how many siblings I have.');
+  console.log(sixthGuess);
+  let mySiblings = 2;
+  let userAttempts = 0;
+  while (userAttempts < 4){
+    if (sixthGuess === mySiblings){
+      alert('Yes! That is right.');
+      correctAnswer++;
+      break;
+    } else if (sixthGuess > mySiblings){
+      alert('Your guess is too high');
+    } else {
+      alert('Your guess is too low');
+    }
+    userAttempts += 1;
+    if (userAttempts === 4){
+      alert('No more turns, but the answer is 2');
+      break;
+    }
+    sixthGuess = +prompt('Guess how many siblings I have.');
   }
-  userAttempts += 1;
-  if (userAttempts === 4){
-    alert('No more turns, but the answer is 2');
-    break;
-  }
-  sixthGuess = +prompt('Guess how many siblings I have.');
+
 }
+
+siblingsQuestion();
+
 // for (i=0; i < mySiblings.length; i++){
 //   if (firstNumber === 2){
 //   alert('Yes! That is right.');
@@ -146,7 +152,7 @@ while (userAttempts < 4){
 // }
 
 let favHobby = ['reading', 'dancing', 'hiking'];
-let numAttempts = 0;
+let numAttempts = ;
 let maxAttempt = 6;
 let correctGuess = false;
 while (numAttempts < maxAttempt && !correctGuess) {
