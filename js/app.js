@@ -5,17 +5,22 @@ console.log('Hi World');
 let userName = prompt('What is your name?');
 alert(`I'm glad to have you here ${userName}. I want you to get to know me, through a guessing game! Plese respond with yes/no OR y/n`);
 
-let firstGuess = prompt('Do I have any pets?').toLowerCase();
 
 let correctAnswer = 0;
 
-if (firstGuess === 'yes' || firstGuess === 'y'){
-  //console.log('wrong user response');
-  alert('That is incorrect, but I would love to get one!');
-} else if(firstGuess === 'no' || firstGuess === 'n'){
-  alert('That\'s right! and sad, I know.');
-  correctAnswer++;
+function petQuestion(){
+  let firstGuess = prompt('Do I have any pets?').toLowerCase();
+  
+  if (firstGuess === 'yes' || firstGuess === 'y'){
+    //console.log('wrong user response');
+    alert('That is incorrect, but I would love to get one!');
+  } else if(firstGuess === 'no' || firstGuess === 'n'){
+    alert('That\'s right! and sad, I know.');
+    correctAnswer++;
+  }
+
 }
+petQuestion();
 
 let secondGuess = prompt('Is my favorite color pink?').toLowerCase();
 
