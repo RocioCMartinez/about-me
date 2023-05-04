@@ -150,27 +150,31 @@ siblingsQuestion();
 //     numAttempts++;
 //   }
 // }
-
-let favHobby = ['reading', 'dancing', 'hiking'];
-let numAttempts = ;
-let maxAttempt = 6;
-let correctGuess = false;
-while (numAttempts < maxAttempt && !correctGuess) {
-  let seventhGuess = prompt('Guess my favorite hobby!').toLowerCase();
-  for (let i = 0; i < favHobby.length; i++) {
-    if (seventhGuess === favHobby[i]) {
-      alert(`You're good ${userName}!`);
-      correctGuess = true;
-      correctAnswer++;
+function hobbyQuestion(){
+  let favHobby = ['reading', 'dancing', 'hiking'];
+  let numAttempts = 0;
+  let maxAttempt = 6;
+  let correctGuess = false;
+  while (numAttempts < maxAttempt && !correctGuess) {
+    let seventhGuess = prompt('Guess my favorite hobby!').toLowerCase();
+    for (let i = 0; i < favHobby.length; i++) {
+      if (seventhGuess === favHobby[i]) {
+        alert(`You're good ${userName}!`);
+        correctGuess = true;
+        correctAnswer++;
+        break;
+      }
+    }
+    if (numAttempts === maxAttempt - 1 && !correctGuess) {
+      alert('Out of chances! Game over. The correct answers are reading, dancing, or hiking!');
       break;
+    } else if (!correctGuess) {
+      alert('Try again');
+      numAttempts++;
     }
   }
-  if (numAttempts === maxAttempt - 1 && !correctGuess) {
-    alert('Out of chances! Game over. The correct answers are reading, dancing, or hiking!');
-    break;
-  } else if (!correctGuess) {
-    alert('Try again');
-    numAttempts++;
-  }
+
 }
+
+hobbyQuestion();
 alert(`${userName} you got ${correctAnswer}/7 questions right!`);
