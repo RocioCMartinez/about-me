@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('Hi World');
+// console.log('Hi World');
 
 let userName = prompt('What is your name?');
 alert(`I'm glad to have you here ${userName}. I want you to get to know me, through a guessing game! Plese respond with yes/no OR y/n`);
@@ -10,7 +10,6 @@ let correctAnswer = 0;
 
 function petQuestion(){
   let firstGuess = prompt('Do I have any pets?').toLowerCase();
-  
   if (firstGuess === 'yes' || firstGuess === 'y'){
     //console.log('wrong user response');
     alert('That is incorrect, but I would love to get one!');
@@ -24,7 +23,6 @@ petQuestion();
 
 function colorQuestion(){
   let secondGuess = prompt('Is my favorite color pink?').toLowerCase();
-  
   if (secondGuess === 'yes' || secondGuess === 'y'){
     //console.log('user is wrong');
     alert('You would be wrong. My favorite color is emerald green.');
@@ -38,7 +36,6 @@ colorQuestion();
 
 function workoutQuestion(){
   let thirdGuess = prompt('Do I like to workout?').toLowerCase();
-  
   if (thirdGuess === 'yes' || thirdGuess === 'y'){
     //console.log('user is right');
     alert('That is correct! Usually 5 days a week to keep my stress down.');
@@ -52,7 +49,6 @@ workoutQuestion();
 
 function readingQuestion(){
   let fourthGuess = prompt('Do I enjoy reading?').toLowerCase();
-  
   if (fourthGuess === 'yes' || fourthGuess === 'y'){
     //console.log('correct answer');
     alert('Correct! I love to read, it\'s a good escape');
@@ -66,7 +62,6 @@ readingQuestion();
 
 function cookQuestion(){
   let fithGuess = prompt('Do I like to cook?').toLowerCase();
-  
   if (fithGuess === 'yes' || fithGuess === 'y'){
     //console.log('right answer');
     alert(`That's right! I challenge myself to make healthy versions of Mexican food. Way to go ${userName}!`);
@@ -80,8 +75,8 @@ function cookQuestion(){
 cookQuestion();
 
 function siblingsQuestion(){
-  let sixthGuess = +prompt('Guess how many siblings I have.');
-  console.log(sixthGuess);
+  let sixthGuess = +prompt('Using a number now, guess how many siblings I have.');
+  // console.log(sixthGuess);
   let mySiblings = 2;
   let userAttempts = 0;
   while (userAttempts < 4){
@@ -91,7 +86,7 @@ function siblingsQuestion(){
       break;
     } else if (sixthGuess > mySiblings){
       alert('Your guess is too high');
-    } else {
+    } else if (sixthGuess < mySiblings){
       alert('Your guess is too low');
     }
     userAttempts += 1;
@@ -166,7 +161,7 @@ function hobbyQuestion(){
       }
     }
     if (numAttempts === maxAttempt - 1 && !correctGuess) {
-      alert('Out of chances! Game over. The correct answers are reading, dancing, or hiking!');
+      alert(`Out of chances! Game over. The correct answers are ${favHobby}!`);
       break;
     } else if (!correctGuess) {
       alert('Try again');
